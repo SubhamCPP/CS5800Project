@@ -1,11 +1,13 @@
 package cppfooddelivery.Builder;
 
+import cppfooddelivery.Factory.Diet;
 import cppfooddelivery.users.Customer;
 
 public class CustomerBuilder {
     private  String name;
     private  String address;
     private  String county;
+    private Diet diet;
     public CustomerBuilder(){}
 
     public CustomerBuilder setName(String name) {
@@ -22,7 +24,11 @@ public class CustomerBuilder {
         this.county = county;
         return this;
     }
+    public CustomerBuilder setDiet(Diet diet) {
+        this.diet = diet;
+        return this;
+    }
     public Customer createCustomer(){
-        return new Customer(name,address,county);
+        return new Customer(name,address,county,diet);
     }
 }

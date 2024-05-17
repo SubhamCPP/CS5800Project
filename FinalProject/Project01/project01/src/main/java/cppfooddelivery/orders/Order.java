@@ -1,19 +1,19 @@
 package cppfooddelivery.orders;
 
+import cppfooddelivery.Decorator.Interface.Food;
 import cppfooddelivery.users.*;
-import cppfooddelivery.meals.*;
 import java.util.*;
 
 public class Order {
     private Restaurant restaurant;
     private Customer customer;
-    private List<Meal> meals;
+    private List<Food> meals;
     private Driver driver;
     private Date orderCreationTime;
     private Date orderPickUpTime;
     private Date deliveredTime;
 
-    public Order(Restaurant restaurant, Customer customer, List<Meal> meals, Date orderCreationTime) {
+    public Order(Restaurant restaurant, Customer customer, List<Food> meals, Date orderCreationTime) {
         this.restaurant = restaurant;
         this.customer = customer;
         this.meals = meals;
@@ -28,7 +28,7 @@ public class Order {
         return customer;
     }
 
-    public List<Meal> getMeals() {
+    public List<Food> getMeals() {
         return meals;
     }
 

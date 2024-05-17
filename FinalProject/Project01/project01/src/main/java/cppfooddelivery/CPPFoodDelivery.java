@@ -1,14 +1,15 @@
 package cppfooddelivery;
 
+import cppfooddelivery.Decorator.Interface.Food;
 import cppfooddelivery.users.*;
 import cppfooddelivery.orders.*;
 import java.util.*;
 
 public class CPPFoodDelivery {
     private static CPPFoodDelivery instance;
-    private List<Restaurant> restaurants = new ArrayList<>();
+    private Map<String,Restaurant> restaurants = new HashMap<>();
     private List<Driver> drivers = new ArrayList<>();
-    private List<Customer> customers = new ArrayList<>();
+    private Map<String,Customer> customers = new HashMap<>();
 
     private CPPFoodDelivery() {}
 
@@ -26,7 +27,7 @@ public class CPPFoodDelivery {
     }
 
     public void registerRestaurant(Restaurant restaurant) {
-        restaurants.add(restaurant);
+        restaurants.put(restaurant.getName(),restaurant);
         System.out.println("Registered restaurant: " + restaurant.getName() +
                 ", Address: " + restaurant.getAddress() +
                 ", County: " + restaurant.getCounty() +
@@ -43,28 +44,35 @@ public class CPPFoodDelivery {
     }
 
     public void registerCustomer(Customer customer) {
-        customers.add(customer);
+        customers.put(customer.getName(),customer);
         System.out.println("Registered customer: " + customer.getName() +
                 ", Address: " + customer.getAddress() +
                 ", County: " + customer.getCounty());
     }
 
-    public List<Restaurant> getRestaurants() {
-        return restaurants;
+    public Restaurant getRestaurants(String name) {
+        return restaurants.get(name);
     }
+
 
     public List<Driver> getDrivers() {
         return drivers;
     }
 
-    public List<Customer> getCustomers() {
-        return customers;
+    public Customer getCustomers(String name) {
+        return customers.get(name);
     }
 
     public void placeOrder(Order order) {
-        System.out.println("Placing order from " + order.getCustomer().getName() +
+        System.out.print("Placing order from " + order.getCustomer().getName() +
                 " to " + order.getRestaurant().getName() +
-                " with items: " + order.getMeals().get(0).getDescription());
+                " with items: ");
+        for(Food food:  order.getMeals()){
+            System.out.print(food.getDescription());
+            System.out.print(", ");
+
+        }
+        System.out.println();
 
         boolean orderPlaced = false;
         for (Driver driver : drivers) {
