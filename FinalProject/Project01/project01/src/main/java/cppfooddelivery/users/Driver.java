@@ -3,6 +3,7 @@ package cppfooddelivery.users;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 public class Driver extends User {
@@ -16,8 +17,8 @@ public class Driver extends User {
     }
 
     public boolean isAvailable(Date orderTime, String county, Date estimatedDeliveryTime) {
-        // Check if driver is available based on shift, county, and ongoing deliveries
-        boolean available = this.county.equals(county) && isWithinShift(orderTime) && !hasConflict(estimatedDeliveryTime);
+        clearPastDeliveries();
+        boolean available = this.county.equals(county) && isWithinShift(orderTime) && !hasConflict(orderTime, estimatedDeliveryTime);
         System.out.println("Driver " + name + " availability: " + available);
         return available;
     }
@@ -27,20 +28,20 @@ public class Driver extends User {
         int orderHour = Integer.parseInt(sdf.format(orderTime));
 
         switch (shift) {
-            case "1st shift: 8AM - 4PM": // 8AM - 4PM
+            case "1st shift: 8AM - 4PM":
                 return orderHour >= 8 && orderHour < 16;
-            case "2nd shift: 4PM - 12AM": // 4PM - 12AM
-                return orderHour >= 16 && orderHour < 24;
-            case "3rd shift: 12AM - 8AM": // 12AM - 8AM
-                return orderHour >= 0 && orderHour < 8;
+            case "2nd shift: 4PM - 12AM":
+                return orderHour >= 16 || orderHour < 1; // Includes hour 0 which is 12AM
+            case "3rd shift: 12AM - 8AM":
+                return orderHour < 8 && orderHour >= 0;
             default:
                 return false;
         }
     }
 
-    private boolean hasConflict(Date estimatedDeliveryTime) {
+    private boolean hasConflict(Date orderTime, Date estimatedDeliveryTime) {
         for (Date[] delivery : ongoingDeliveries) {
-            if (estimatedDeliveryTime.before(delivery[1])) {
+            if (!orderTime.after(delivery[1])) {
                 return true;
             }
         }
@@ -49,6 +50,11 @@ public class Driver extends User {
 
     public void addDelivery(Date pickUpTime, Date deliveryTime) {
         ongoingDeliveries.add(new Date[] { pickUpTime, deliveryTime });
+    }
+
+    public void clearPastDeliveries() {
+        Date now = new Date();
+        ongoingDeliveries.removeIf(delivery -> now.after(delivery[1]));
     }
 
     public String getShift() {
