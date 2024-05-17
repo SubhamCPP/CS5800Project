@@ -49,8 +49,8 @@ public class Main {
         platform.registerDriver(new DriverBuilder().setName("Driver 4").setAddress("Address 4").setCounty("LA County").setShift("1st shift: 8AM - 4PM").createDriver());
         platform.registerDriver(new DriverBuilder().setName("Driver 5").setAddress("Address 5").setCounty("Orange County").setShift("2nd shift: 4PM - 12AM").createDriver());
         platform.registerDriver(new DriverBuilder().setName("Driver 6").setAddress("Address 6").setCounty("San Bernardino County").setShift("3rd shift: 12AM - 8AM").createDriver());
-        platform.registerDriver(new DriverBuilder().setName("Driver 7").setAddress("Address 7").setCounty("LA County").setShift("1st shift: 8AM - 4PM").createDriver());
-        platform.registerDriver(new DriverBuilder().setName("Driver 8").setAddress("Address 8").setCounty("Orange County").setShift("2nd shift: 4PM - 12AM").createDriver());
+        platform.registerDriver(new DriverBuilder().setName("Driver 7").setAddress("Address 7").setCounty("LA County").setShift("2nd shift: 4PM - 12AM").createDriver());
+        platform.registerDriver(new DriverBuilder().setName("Driver 8").setAddress("Address 8").setCounty("Orange County").setShift("3rd shift: 12AM - 8AM").createDriver());
 
         System.out.println("=========================================================================================");
         // Register Customers
