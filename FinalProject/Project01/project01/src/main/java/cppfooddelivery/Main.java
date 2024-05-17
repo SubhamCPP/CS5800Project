@@ -1,5 +1,6 @@
 package cppfooddelivery;
 
+import cppfooddelivery.Builder.ResturantBuilder;
 import cppfooddelivery.factories.*;
 import cppfooddelivery.orders.*;
 import cppfooddelivery.users.*;
@@ -14,7 +15,7 @@ public class Main {
         System.out.println("=========================================================================================");
         // Register Restaurants
         RestaurantFactory restaurantFactory = new RestaurantFactory();
-        platform.registerRestaurant(restaurantFactory.createRestaurant("Restaurant 1", "Address 1", "LA County", "Mexican", "8AM-10PM"));
+        platform.registerRestaurant(new ResturantBuilder().setCounty("LA County").setAddress("Address 1").setName("Restaurant 1").createRestaurant());
         platform.registerRestaurant(restaurantFactory.createRestaurant("Restaurant 2", "Address 2", "Orange County", "Thai", "9AM-9PM"));
         platform.registerRestaurant(restaurantFactory.createRestaurant("Restaurant 3", "Address 3", "San Bernardino County", "Italian", "10AM-11PM"));
         platform.registerRestaurant(restaurantFactory.createRestaurant("Restaurant 4", "Address 4", "LA County", "Chinese", "11AM-12AM"));

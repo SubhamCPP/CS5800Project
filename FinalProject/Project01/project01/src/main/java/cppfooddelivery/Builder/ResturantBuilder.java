@@ -11,8 +11,9 @@ public class ResturantBuilder {
 
     public ResturantBuilder(){}
 
-    public void setName(String name) {
+    public ResturantBuilder setName(String name) {
         this.name = name;
+        return this;
     }
 
     public ResturantBuilder setAddress(String address) {
