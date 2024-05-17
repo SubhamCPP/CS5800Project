@@ -65,7 +65,7 @@ public class CPPFoodDelivery {
 
     public void placeOrder(Order order) {
         System.out.print("Placing order from " + order.getCustomer().getName() +
-                " to " + order.getRestaurant().getName() +
+                " with a "+ order.getCustomer().getDiet()+" diet to " + order.getRestaurant().getName() +
                 " with items: ");
         for(Food food:  order.getMeals()){
             System.out.print(food.getDescription());
