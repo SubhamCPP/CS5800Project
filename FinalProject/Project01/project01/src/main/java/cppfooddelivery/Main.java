@@ -29,26 +29,26 @@ public class Main {
         platform.getRestaurants("Taco Fiesta").addMenu("Tofu Taco",new Taco(),new ArrayList<FoodToppings>(List.of(new Cheese(),new BlackBean(),new Tofu())));
         platform.getRestaurants("Taco Fiesta").addMenu("BlackBean Taco",new Taco(),new ArrayList<FoodToppings>(List.of(new Cheese())));
 
-        platform.registerRestaurant(new ResturantBuilder().setCounty("San Bernardino County").setAddress("789 Pasta Place").setCuisineType("Thai").setName("Pasta Palace").setCuisineType("Italian").setOperatingHours("10AM-11PM").createRestaurant());
-        platform.getRestaurants("Pasta Palace").addMenu("Fish Sandwich",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Cheese(),new Salmon())));
-        platform.getRestaurants("Pasta Palace").addMenu("Beef Sandwich",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Beef())));
-        platform.getRestaurants("Pasta Palace").addMenu("Tofu Sandwich",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Tofu())));
-        platform.getRestaurants("Pasta Palace").addMenu("Cheese Sandwich",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Cheese())));
+        platform.registerRestaurant(new ResturantBuilder().setCounty("San Bernardino County").setAddress("789 Sandwich Place").setCuisineType("Thai").setName("Sandwich Palace").setCuisineType("Italian").setOperatingHours("10AM-11PM").createRestaurant());
+        platform.getRestaurants("Sandwich Palace").addMenu("Fish Sandwich",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Cheese(),new Salmon())));
+        platform.getRestaurants("Sandwich Palace").addMenu("Beef Sandwich",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Beef())));
+        platform.getRestaurants("Sandwich Palace").addMenu("Tofu Sandwich",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Tofu())));
+        platform.getRestaurants("Sandwich Palace").addMenu("Cheese Sandwich",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Cheese())));
 
-        platform.registerRestaurant(new ResturantBuilder().setCounty("LA County").setAddress("101 American Blvd").setName("Burger Barn").setCuisineType("American").setOperatingHours("11AM-12AM").createRestaurant());
-        platform.getRestaurants("Burger Barn").addMenu("Fish Salad",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Cheese(),new Salmon())));
-        platform.getRestaurants("Burger Barn").addMenu("Beef Salad",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Beef())));
-        platform.getRestaurants("Burger Barn").addMenu("Tofu Salad",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Tofu())));
-        platform.getRestaurants("Burger Barn").addMenu("BlackBean Salad",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Cheese())));
+        platform.registerRestaurant(new ResturantBuilder().setCounty("LA County").setAddress("101 American Blvd").setName("Salad Barn").setCuisineType("American").setOperatingHours("11AM-12AM").createRestaurant());
+        platform.getRestaurants("Salad Barn").addMenu("Fish Salad",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Cheese(),new Salmon())));
+        platform.getRestaurants("Salad Barn").addMenu("Beef Salad",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Beef())));
+        platform.getRestaurants("Salad Barn").addMenu("Tofu Salad",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Tofu())));
+        platform.getRestaurants("Salad Barn").addMenu("BlackBean Salad",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Cheese())));
 
         System.out.println("=========================================================================================");
         // Register Drivers
         platform.registerDriver(new DriverBuilder().setName("James Smith").setAddress("123 Dragon Street").setCounty("LA County").setShift("1st shift: 8AM - 4PM").createDriver());
         platform.registerDriver(new DriverBuilder().setName("Maria Garcia").setAddress("456 Taco Way").setCounty("Orange County").setShift("2nd shift: 4PM - 12AM").createDriver());
-        platform.registerDriver(new DriverBuilder().setName("John Johnson").setAddress("789 Pasta Place").setCounty("San Bernardino County").setShift("3rd shift: 12AM - 8AM").createDriver());
+        platform.registerDriver(new DriverBuilder().setName("John Johnson").setAddress("789 Sandwich Place").setCounty("San Bernardino County").setShift("3rd shift: 12AM - 8AM").createDriver());
         platform.registerDriver(new DriverBuilder().setName("Sophia Lee").setAddress("101 American Blvd").setCounty("LA County").setShift("1st shift: 8AM - 4PM").createDriver());
         platform.registerDriver(new DriverBuilder().setName("Michael Brown").setAddress("456 Taco Way").setCounty("Orange County").setShift("2nd shift: 4PM - 12AM").createDriver());
-        platform.registerDriver(new DriverBuilder().setName("Linda Davis").setAddress("789 Pasta Place").setCounty("San Bernardino County").setShift("3rd shift: 12AM - 8AM").createDriver());
+        platform.registerDriver(new DriverBuilder().setName("Linda Davis").setAddress("789 Sandwich Place").setCounty("San Bernardino County").setShift("3rd shift: 12AM - 8AM").createDriver());
         platform.registerDriver(new DriverBuilder().setName("Robert Wilson").setAddress("101 American Blvd").setCounty("LA County").setShift("2nd shift: 4PM - 12AM").createDriver());
         platform.registerDriver(new DriverBuilder().setName("Sarah Moore").setAddress("456 Taco Way").setCounty("Orange County").setShift("3rd shift: 12AM - 8AM").createDriver());
 
@@ -56,13 +56,13 @@ public class Main {
         // Register Customers
         platform.registerCustomer(new CustomerBuilder().setName("Alice Johnson").setAddress("123 Dragon Street").setCounty("LA County").setDiet(Diet.Vegan).createCustomer());
         platform.registerCustomer(new CustomerBuilder().setName("Carlos Martinez").setAddress("456 Taco Way").setCounty("Orange County").setDiet(Diet.Vegetarian).createCustomer());
-        platform.registerCustomer(new CustomerBuilder().setName("Jessica Lee").setAddress("789 Pasta Place").setCounty("San Bernardino County").setDiet(Diet.Pescetarian).createCustomer());
+        platform.registerCustomer(new CustomerBuilder().setName("Jessica Lee").setAddress("789 Sandwich Place").setCounty("San Bernardino County").setDiet(Diet.Pescetarian).createCustomer());
         platform.registerCustomer(new CustomerBuilder().setName("Mike Brown").setAddress("101 American Blvd").setCounty("LA County").setDiet(Diet.Paleo).createCustomer());
         platform.registerCustomer(new CustomerBuilder().setName("Rachel Wilson").setAddress("123 Dragon Street").setCounty("Orange County").setDiet(Diet.NutAllergy).createCustomer());
-        platform.registerCustomer(new CustomerBuilder().setName("Steven Clark").setAddress("789 Pasta Place").setCounty("San Bernardino County").setDiet(Diet.LactoseIntolerance).createCustomer());
+        platform.registerCustomer(new CustomerBuilder().setName("Steven Clark").setAddress("789 Sandwich Place").setCounty("San Bernardino County").setDiet(Diet.LactoseIntolerance).createCustomer());
         platform.registerCustomer(new CustomerBuilder().setName("Ashley Taylor").setAddress("101 American Blvd").setCounty("LA County").setDiet(Diet.NoRestriction).createCustomer());
         platform.registerCustomer(new CustomerBuilder().setName("Chris Jones").setAddress("456 Taco Way").setCounty("Orange County").setDiet(Diet.NoRestriction).createCustomer());
-        platform.registerCustomer(new CustomerBuilder().setName("Emma Wilson").setAddress("789 Pasta Place").setCounty("San Bernardino County").setDiet(Diet.NoRestriction).createCustomer());
+        platform.registerCustomer(new CustomerBuilder().setName("Emma Wilson").setAddress("789 Sandwich Place").setCounty("San Bernardino County").setDiet(Diet.NoRestriction).createCustomer());
         platform.registerCustomer(new CustomerBuilder().setName("Oliver Thomas").setAddress("123 Dragon Street").setCounty("LA County").setDiet(Diet.NoRestriction).createCustomer());
 
         System.out.println("=========================================================================================");
@@ -108,12 +108,12 @@ public class Main {
         Date orderTime3 = calendar3.getTime();
         List<Food> meals3 = new ArrayList<>();
 
-        meals3.add(platform.getRestaurants("Pasta Palace").getMeal("Fish Sandwich",platform.getCustomers("Jessica Lee").getDiet(),new Spinach()));
-        meals3.add(platform.getRestaurants("Pasta Palace").getMeal("Beef Sandwich",platform.getCustomers("Jessica Lee").getDiet(),new BlackBean()));
-        meals3.add(platform.getRestaurants("Pasta Palace").getMeal("Tofu Sandwich",platform.getCustomers("Jessica Lee").getDiet(),new Egg()));
-        meals3.add(platform.getRestaurants("Pasta Palace").getMeal("Cheese Sandwich",platform.getCustomers("Jessica Lee").getDiet(),new Apple()));
+        meals3.add(platform.getRestaurants("Sandwich Palace").getMeal("Fish Sandwich",platform.getCustomers("Jessica Lee").getDiet(),new Spinach()));
+        meals3.add(platform.getRestaurants("Sandwich Palace").getMeal("Beef Sandwich",platform.getCustomers("Jessica Lee").getDiet(),new BlackBean()));
+        meals3.add(platform.getRestaurants("Sandwich Palace").getMeal("Tofu Sandwich",platform.getCustomers("Jessica Lee").getDiet(),new Egg()));
+        meals3.add(platform.getRestaurants("Sandwich Palace").getMeal("Cheese Sandwich",platform.getCustomers("Jessica Lee").getDiet(),new Apple()));
 
-        Order order3 = new Order(platform.getRestaurants("Pasta Palace"), platform.getCustomers("Jessica Lee"), meals3, orderTime3);
+        Order order3 = new Order(platform.getRestaurants("Sandwich Palace"), platform.getCustomers("Jessica Lee"), meals3, orderTime3);
         platform.placeOrder(order3);
 
         System.out.println("=========================================================================================");
@@ -124,12 +124,12 @@ public class Main {
         Date orderTime4 = calendar4.getTime();
 
         List<Food> meals4 = new ArrayList<>();
-        meals4.add(platform.getRestaurants("Burger Barn").getMeal("Fish Salad",platform.getCustomers("Mike Brown").getDiet(),new Spinach()));
-        meals4.add(platform.getRestaurants("Burger Barn").getMeal("Beef Salad",platform.getCustomers("Mike Brown").getDiet(),new BlackBean()));
-        meals4.add(platform.getRestaurants("Burger Barn").getMeal("Tofu Salad",platform.getCustomers("Mike Brown").getDiet(),new Egg()));
-        meals4.add(platform.getRestaurants("Burger Barn").getMeal("BlackBean Salad",platform.getCustomers("Mike Brown").getDiet(),new Cheese()));
+        meals4.add(platform.getRestaurants("Salad Barn").getMeal("Fish Salad",platform.getCustomers("Mike Brown").getDiet(),new Spinach()));
+        meals4.add(platform.getRestaurants("Salad Barn").getMeal("Beef Salad",platform.getCustomers("Mike Brown").getDiet(),new BlackBean()));
+        meals4.add(platform.getRestaurants("Salad Barn").getMeal("Tofu Salad",platform.getCustomers("Mike Brown").getDiet(),new Egg()));
+        meals4.add(platform.getRestaurants("Salad Barn").getMeal("BlackBean Salad",platform.getCustomers("Mike Brown").getDiet(),new Cheese()));
 
-        Order order4 = new Order(platform.getRestaurants("Burger Barn"), platform.getCustomers("Mike Brown"), meals4, orderTime4);
+        Order order4 = new Order(platform.getRestaurants("Salad Barn"), platform.getCustomers("Mike Brown"), meals4, orderTime4);
         platform.placeOrder(order4);
 
         System.out.println("=========================================================================================");
@@ -173,12 +173,12 @@ public class Main {
         Date orderTime7 = calendar7.getTime();
 
         List<Food> meals7 = new ArrayList<>();
-        meals7.add(platform.getRestaurants("Pasta Palace").getMeal("Fish Sandwich",platform.getCustomers("Ashley Taylor").getDiet(),new Spinach()));
-        meals7.add(platform.getRestaurants("Pasta Palace").getMeal("Beef Sandwich",platform.getCustomers("Ashley Taylor").getDiet(),new BlackBean()));
-        meals7.add(platform.getRestaurants("Pasta Palace").getMeal("Tofu Sandwich",platform.getCustomers("Ashley Taylor").getDiet(),new Egg()));
-        meals7.add(platform.getRestaurants("Pasta Palace").getMeal("Cheese Sandwich",platform.getCustomers("Ashley Taylor").getDiet(),new Apple()));
+        meals7.add(platform.getRestaurants("Sandwich Palace").getMeal("Fish Sandwich",platform.getCustomers("Ashley Taylor").getDiet(),new Spinach()));
+        meals7.add(platform.getRestaurants("Sandwich Palace").getMeal("Beef Sandwich",platform.getCustomers("Ashley Taylor").getDiet(),new BlackBean()));
+        meals7.add(platform.getRestaurants("Sandwich Palace").getMeal("Tofu Sandwich",platform.getCustomers("Ashley Taylor").getDiet(),new Egg()));
+        meals7.add(platform.getRestaurants("Sandwich Palace").getMeal("Cheese Sandwich",platform.getCustomers("Ashley Taylor").getDiet(),new Apple()));
 
-        Order order7 = new Order(platform.getRestaurants("Pasta Palace"), platform.getCustomers("Ashley Taylor"), meals7, orderTime7);
+        Order order7 = new Order(platform.getRestaurants("Sandwich Palace"), platform.getCustomers("Ashley Taylor"), meals7, orderTime7);
         platform.placeOrder(order7);
 
         System.out.println("=========================================================================================");
@@ -189,12 +189,12 @@ public class Main {
         Date orderTime8 = calendar8.getTime();
 
         List<Food> meals8 = new ArrayList<>();
-        meals8.add(platform.getRestaurants("Burger Barn").getMeal("Fish Salad",platform.getCustomers("Chris Jones").getDiet(),new Spinach()));
-        meals8.add(platform.getRestaurants("Burger Barn").getMeal("Beef Salad",platform.getCustomers("Chris Jones").getDiet(),new BlackBean()));
-        meals8.add(platform.getRestaurants("Burger Barn").getMeal("Tofu Salad",platform.getCustomers("Chris Jones").getDiet(),new Egg()));
-        meals8.add(platform.getRestaurants("Burger Barn").getMeal("BlackBean Salad",platform.getCustomers("Chris Jones").getDiet(),new Cheese()));
+        meals8.add(platform.getRestaurants("Salad Barn").getMeal("Fish Salad",platform.getCustomers("Chris Jones").getDiet(),new Spinach()));
+        meals8.add(platform.getRestaurants("Salad Barn").getMeal("Beef Salad",platform.getCustomers("Chris Jones").getDiet(),new BlackBean()));
+        meals8.add(platform.getRestaurants("Salad Barn").getMeal("Tofu Salad",platform.getCustomers("Chris Jones").getDiet(),new Egg()));
+        meals8.add(platform.getRestaurants("Salad Barn").getMeal("BlackBean Salad",platform.getCustomers("Chris Jones").getDiet(),new Cheese()));
 
-        Order order8 = new Order(platform.getRestaurants("Burger Barn"), platform.getCustomers("Chris Jones"), meals8, orderTime8);
+        Order order8 = new Order(platform.getRestaurants("Salad Barn"), platform.getCustomers("Chris Jones"), meals8, orderTime8);
         platform.placeOrder(order8);
 
         System.out.println("=========================================================================================");
