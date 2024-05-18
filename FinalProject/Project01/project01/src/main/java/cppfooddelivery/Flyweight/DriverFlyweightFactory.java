@@ -8,10 +8,11 @@ import java.util.Map;
 import java.util.Objects;
 
 public class DriverFlyweightFactory {
-    private final Map<Integer, Driver> driverHashTable = new HashMap<>();
+    private final Map<String, Driver> driverHashTable = new HashMap<>();
 
     public Driver getDriver(String name, String address, String county, String shift) {
-        int key = Objects.hash(name, address, county, shift);
+        String key = name+  address + county + shift;
+
         if (!driverHashTable.containsKey(key)) {
             driverHashTable.put(key, new Driver(name, address, county, shift));
         }

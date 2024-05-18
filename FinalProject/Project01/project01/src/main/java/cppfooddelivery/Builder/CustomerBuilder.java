@@ -12,7 +12,7 @@ public class CustomerBuilder {
     private  String address;
     private  String county;
     private Diet diet;
-    private final CustomerFlyweightFactory customerFlyweightFactory = new CustomerFlyweightFactory();
+    public static CustomerFlyweightFactory customerFlyweightFactory = new CustomerFlyweightFactory();
     public CustomerBuilder(){}
 
     public CustomerBuilder setName(String name) {

@@ -9,7 +9,7 @@ public class RestaurantBuilder {
     private String county;
     private String cuisineType;
     private String operatingHours;
-    private RestaurantFlyweightFactory restaurantFlyweightFactory = new RestaurantFlyweightFactory();
+    public static RestaurantFlyweightFactory restaurantFlyweightFactory = new RestaurantFlyweightFactory();
     public RestaurantBuilder(){}
 
     public RestaurantBuilder setName(String name) {

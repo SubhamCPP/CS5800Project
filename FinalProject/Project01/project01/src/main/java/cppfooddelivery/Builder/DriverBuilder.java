@@ -9,7 +9,7 @@ public class DriverBuilder {
     private String address;
     private String county;
     private String shift;
-    private final DriverFlyweightFactory driverFlyweightFactory = new DriverFlyweightFactory();
+    public static DriverFlyweightFactory driverFlyweightFactory = new DriverFlyweightFactory();
 
     public DriverBuilder(){}
 

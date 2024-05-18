@@ -9,12 +9,14 @@ import java.util.Map;
 import java.util.Objects;
 
 public class CustomerFlyweightFactory {
-    private final Map<Integer, Customer> customerHashTable = new HashMap<>();
+    private final Map<String, Customer> customerHashTable = new HashMap<>();
 
     public Customer getCustomer(String name, String address, String county, Diet diet) {
-        int key = Objects.hash(name, address, county, diet);
+        String key = name + address + county + diet;
+
         if (!customerHashTable.containsKey(key)) {
-            customerHashTable.put(key, new Customer(name, address, county, diet));
+            Customer newCustomer = new Customer(name, address, county, diet);
+            customerHashTable.put(key, newCustomer);
         }
         return customerHashTable.get(key);
     }
