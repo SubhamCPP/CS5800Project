@@ -1,6 +1,9 @@
-package cppfooddelivery.Factory;
+package cppfooddelivery.Factory.protein;
 
-public class Eggs extends Ingredients{
+import cppfooddelivery.Factory.Diet;
+import cppfooddelivery.Factory.Ingredients;
+
+public class Eggs extends Ingredients {
     public Eggs() {
         super("Eggs");
     }

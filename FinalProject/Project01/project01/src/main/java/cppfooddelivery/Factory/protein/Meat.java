@@ -1,8 +1,11 @@
-package cppfooddelivery.Factory;
+package cppfooddelivery.Factory.protein;
 
-public class Fish extends Ingredients{
-    public Fish() {
-        super("Fish");
+import cppfooddelivery.Factory.Diet;
+import cppfooddelivery.Factory.Ingredients;
+
+public class Meat extends Ingredients {
+    public Meat() {
+        super("Meat");
     }
 
     @Override
@@ -10,6 +13,7 @@ public class Fish extends Ingredients{
         switch (diet){
             case Vegan:
             case Vegetarian:
+            case Pescetarian:
                 return false;
             default:
                 return true;

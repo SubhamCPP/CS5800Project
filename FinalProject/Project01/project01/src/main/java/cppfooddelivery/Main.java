@@ -2,7 +2,7 @@ package cppfooddelivery;
 
 import cppfooddelivery.Builder.CustomerBuilder;
 import cppfooddelivery.Builder.DriverBuilder;
-import cppfooddelivery.Builder.ResturantBuilder;
+import cppfooddelivery.Builder.RestaurantBuilder;
 import cppfooddelivery.Decorator.Base.*;
 import cppfooddelivery.Decorator.Interface.Food;
 import cppfooddelivery.Decorator.Toppings.*;
@@ -17,25 +17,25 @@ public class Main {
 
         System.out.println("=========================================================================================");
         // Register Restaurants
-        platform.registerRestaurant(new ResturantBuilder().setCounty("LA County").setAddress("123 Dragon Street").setName("Golden Dragon").setCuisineType("Chinese").setOperatingHours("8AM-10PM").createRestaurant());
+        platform.registerRestaurant(new RestaurantBuilder().setCounty("LA County").setAddress("123 Dragon Street").setName("Golden Dragon").setCuisineType("Chinese").setOperatingHours("8AM-10PM").createRestaurant());
         platform.getRestaurants("Golden Dragon").addMenu("Fish Noodle",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Salmon())));
         platform.getRestaurants("Golden Dragon").addMenu("Beef Noodle",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Beef())));
         platform.getRestaurants("Golden Dragon").addMenu("Tofu Noodle",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Tofu())));
         platform.getRestaurants("Golden Dragon").addMenu("Cheese Noodle",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Cheese())));
 
-        platform.registerRestaurant(new ResturantBuilder().setCounty("Orange County").setAddress("456 Taco Way").setName("Taco Fiesta").setCuisineType("Mexican").setOperatingHours("9AM-9PM").createRestaurant());
+        platform.registerRestaurant(new RestaurantBuilder().setCounty("Orange County").setAddress("456 Taco Way").setName("Taco Fiesta").setCuisineType("Mexican").setOperatingHours("9AM-9PM").createRestaurant());
         platform.getRestaurants("Taco Fiesta").addMenu("Fish Taco",new Taco(),new ArrayList<FoodToppings>(List.of(new Cheese(),new BlackBean(),new Salmon())));
         platform.getRestaurants("Taco Fiesta").addMenu("Beef Taco",new Taco(),new ArrayList<FoodToppings>(List.of(new Cheese(),new BlackBean(),new Beef())));
         platform.getRestaurants("Taco Fiesta").addMenu("Tofu Taco",new Taco(),new ArrayList<FoodToppings>(List.of(new Cheese(),new BlackBean(),new Tofu())));
         platform.getRestaurants("Taco Fiesta").addMenu("BlackBean Taco",new Taco(),new ArrayList<FoodToppings>(List.of(new Cheese())));
 
-        platform.registerRestaurant(new ResturantBuilder().setCounty("San Bernardino County").setAddress("789 Sandwich Place").setCuisineType("Thai").setName("Sandwich Palace").setCuisineType("Italian").setOperatingHours("10AM-11PM").createRestaurant());
+        platform.registerRestaurant(new RestaurantBuilder().setCounty("San Bernardino County").setAddress("789 Sandwich Place").setCuisineType("Thai").setName("Sandwich Palace").setCuisineType("Italian").setOperatingHours("10AM-11PM").createRestaurant());
         platform.getRestaurants("Sandwich Palace").addMenu("Fish Sandwich",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Cheese(),new Salmon())));
         platform.getRestaurants("Sandwich Palace").addMenu("Beef Sandwich",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Beef())));
         platform.getRestaurants("Sandwich Palace").addMenu("Tofu Sandwich",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Tofu())));
         platform.getRestaurants("Sandwich Palace").addMenu("Cheese Sandwich",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Cheese())));
 
-        platform.registerRestaurant(new ResturantBuilder().setCounty("LA County").setAddress("101 American Blvd").setName("Salad Barn").setCuisineType("American").setOperatingHours("11AM-12AM").createRestaurant());
+        platform.registerRestaurant(new RestaurantBuilder().setCounty("LA County").setAddress("101 American Blvd").setName("Salad Barn").setCuisineType("American").setOperatingHours("11AM-12AM").createRestaurant());
         platform.getRestaurants("Salad Barn").addMenu("Fish Salad",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Cheese(),new Salmon())));
         platform.getRestaurants("Salad Barn").addMenu("Beef Salad",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Beef())));
         platform.getRestaurants("Salad Barn").addMenu("Tofu Salad",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Tofu())));
@@ -92,7 +92,7 @@ public class Main {
         Date orderTime2 = calendar2.getTime();
         List<Food> meals2 = new ArrayList<>();
 
-        meals2.add(platform.getRestaurants("Taco Fiesta").getMeal("Fish Taco",platform.getCustomers("Carlos Martinez").getDiet(),new Spinach()));
+        meals2.add(platform.getRestaurants("Taco Fiesta").getMeal("Fish Taco",platform.getCustomers("Carlos Martinez").getDiet(),new Spinach(), new Egg()));
         meals2.add(platform.getRestaurants("Taco Fiesta").getMeal("Beef Taco",platform.getCustomers("Carlos Martinez").getDiet(),new Peanut()));
         meals2.add(platform.getRestaurants("Taco Fiesta").getMeal("Tofu Taco",platform.getCustomers("Carlos Martinez").getDiet(),new Egg()));
         meals2.add(platform.getRestaurants("Taco Fiesta").getMeal("BlackBean Taco",platform.getCustomers("Carlos Martinez").getDiet(),new Cheese()));

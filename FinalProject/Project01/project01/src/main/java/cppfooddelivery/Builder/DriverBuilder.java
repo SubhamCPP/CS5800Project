@@ -1,5 +1,7 @@
 package cppfooddelivery.Builder;
 
+import cppfooddelivery.Flyweight.CustomerFlyweightFactory;
+import cppfooddelivery.Flyweight.DriverFlyweightFactory;
 import cppfooddelivery.users.Driver;
 
 public class DriverBuilder {
@@ -7,6 +9,7 @@ public class DriverBuilder {
     private String address;
     private String county;
     private String shift;
+    private final DriverFlyweightFactory driverFlyweightFactory = new DriverFlyweightFactory();
 
     public DriverBuilder(){}
 
@@ -30,6 +33,6 @@ public class DriverBuilder {
         return this;
     }
     public Driver createDriver(){
-        return new Driver(name,address,county,shift);
+        return driverFlyweightFactory.getDriver(name,address,county,shift);
     }
 }

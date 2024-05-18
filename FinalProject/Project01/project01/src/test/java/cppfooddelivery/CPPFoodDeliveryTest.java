@@ -2,7 +2,7 @@ package cppfooddelivery;
 
 import cppfooddelivery.Builder.CustomerBuilder;
 import cppfooddelivery.Builder.DriverBuilder;
-import cppfooddelivery.Builder.ResturantBuilder;
+import cppfooddelivery.Builder.RestaurantBuilder;
 import cppfooddelivery.Decorator.Base.Noodles;
 import cppfooddelivery.Decorator.Interface.Food;
 import cppfooddelivery.Decorator.Toppings.Egg;
@@ -28,7 +28,7 @@ public class CPPFoodDeliveryTest {
 
     @Test
     public void testRestaurantRegistration() {
-        Restaurant restaurant = new ResturantBuilder()
+        Restaurant restaurant = new RestaurantBuilder()
                 .setName("Test Restaurant")
                 .setAddress("Test Address")
                 .setCounty("Test County")
@@ -72,7 +72,7 @@ public class CPPFoodDeliveryTest {
 
     @Test
     public void testPlaceOrder() {
-        Restaurant restaurant = new ResturantBuilder()
+        Restaurant restaurant = new RestaurantBuilder()
                 .setName("Test Restaurant")
                 .setAddress("Test Address")
                 .setCounty("Test County")

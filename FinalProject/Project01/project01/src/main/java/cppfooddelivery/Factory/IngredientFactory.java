@@ -1,5 +1,16 @@
 package cppfooddelivery.Factory;
 
+import cppfooddelivery.Factory.carbs.Fruit;
+import cppfooddelivery.Factory.carbs.Grain;
+import cppfooddelivery.Factory.carbs.Vegetable;
+import cppfooddelivery.Factory.fats.Dairy;
+import cppfooddelivery.Factory.fats.Nuts;
+import cppfooddelivery.Factory.fats.Soy;
+import cppfooddelivery.Factory.protein.Beans;
+import cppfooddelivery.Factory.protein.Eggs;
+import cppfooddelivery.Factory.protein.Fish;
+import cppfooddelivery.Factory.protein.Meat;
+
 public class IngredientFactory {
     private static IngredientFactory instance;
     public Ingredients getIngredients(String ingredient){

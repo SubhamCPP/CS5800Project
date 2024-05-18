@@ -1,5 +1,6 @@
-package cppfooddelivery.Factory;
+package cppfooddelivery.Factory.carbs;
 
+import cppfooddelivery.Factory.Diet;
 import cppfooddelivery.Factory.Ingredients;
 
 public class Grain extends Ingredients {

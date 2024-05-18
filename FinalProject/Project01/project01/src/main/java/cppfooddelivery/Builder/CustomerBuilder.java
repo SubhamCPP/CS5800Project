@@ -1,13 +1,18 @@
 package cppfooddelivery.Builder;
 
 import cppfooddelivery.Factory.Diet;
+import cppfooddelivery.Flyweight.CustomerFlyweightFactory;
 import cppfooddelivery.users.Customer;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class CustomerBuilder {
     private  String name;
     private  String address;
     private  String county;
     private Diet diet;
+    private final CustomerFlyweightFactory customerFlyweightFactory = new CustomerFlyweightFactory();
     public CustomerBuilder(){}
 
     public CustomerBuilder setName(String name) {
@@ -29,6 +34,6 @@ public class CustomerBuilder {
         return this;
     }
     public Customer createCustomer(){
-        return new Customer(name,address,county,diet);
+        return customerFlyweightFactory.getCustomer(name,address,county,diet);
     }
 }
