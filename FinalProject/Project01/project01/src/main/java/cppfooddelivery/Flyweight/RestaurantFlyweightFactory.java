@@ -5,7 +5,6 @@ import cppfooddelivery.users.Restaurant;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 public class RestaurantFlyweightFactory {
     private final Map<String, Restaurant> restaurantHashMap = new HashMap<>();

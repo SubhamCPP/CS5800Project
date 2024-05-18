@@ -4,8 +4,6 @@ import cppfooddelivery.Factory.Diet;
 import cppfooddelivery.Flyweight.CustomerFlyweightFactory;
 import cppfooddelivery.users.Customer;
 
-import java.util.HashMap;
-import java.util.Map;
 
 public class CustomerBuilder {
     private  String name;

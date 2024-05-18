@@ -2,11 +2,9 @@ package cppfooddelivery.Flyweight;
 
 import cppfooddelivery.Factory.Diet;
 import cppfooddelivery.users.Customer;
-import cppfooddelivery.users.Driver;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 public class CustomerFlyweightFactory {
     private final Map<String, Customer> customerHashTable = new HashMap<>();

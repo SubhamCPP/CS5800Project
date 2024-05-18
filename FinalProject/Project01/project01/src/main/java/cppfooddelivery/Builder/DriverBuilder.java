@@ -1,6 +1,5 @@
 package cppfooddelivery.Builder;
 
-import cppfooddelivery.Flyweight.CustomerFlyweightFactory;
 import cppfooddelivery.Flyweight.DriverFlyweightFactory;
 import cppfooddelivery.users.Driver;
 
