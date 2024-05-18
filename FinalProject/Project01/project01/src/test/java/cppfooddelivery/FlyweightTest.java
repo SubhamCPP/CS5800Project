@@ -7,8 +7,9 @@ import cppfooddelivery.Factory.Diet;
 import cppfooddelivery.users.Customer;
 import cppfooddelivery.users.Driver;
 import cppfooddelivery.users.Restaurant;
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class FlyweightTest {
     @Test

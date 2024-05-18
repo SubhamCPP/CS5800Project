@@ -12,15 +12,17 @@ import cppfooddelivery.orders.Order;
 import cppfooddelivery.users.Customer;
 import cppfooddelivery.users.Driver;
 import cppfooddelivery.users.Restaurant;
-import org.junit.Before;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.*;
 
 public class CPPFoodDeliveryTest {
     private CPPFoodDelivery platform;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         platform = CPPFoodDelivery.getInstance();
         platform.clear();  // Clear the state before each test
