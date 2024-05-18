@@ -30,16 +30,16 @@ public class Main {
         platform.getRestaurants("Taco Fiesta").addMenu("BlackBean Taco",new Taco(),new ArrayList<FoodToppings>(List.of(new Cheese())));
 
         platform.registerRestaurant(new RestaurantBuilder().setCounty("San Bernardino County").setAddress("789 Sandwich Place").setCuisineType("Thai").setName("Sandwich Palace").setCuisineType("Italian").setOperatingHours("10AM-11PM").createRestaurant());
-        platform.getRestaurants("Sandwich Palace").addMenu("Fish Sandwich",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Cheese(),new Salmon())));
-        platform.getRestaurants("Sandwich Palace").addMenu("Beef Sandwich",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Beef())));
-        platform.getRestaurants("Sandwich Palace").addMenu("Tofu Sandwich",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Tofu())));
-        platform.getRestaurants("Sandwich Palace").addMenu("Cheese Sandwich",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Cheese())));
+        platform.getRestaurants("Sandwich Palace").addMenu("Fish Sandwich",new Sandwich(),new ArrayList<FoodToppings>(List.of(new Egg(),new Cheese(),new Salmon())));
+        platform.getRestaurants("Sandwich Palace").addMenu("Beef Sandwich",new Sandwich(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Beef())));
+        platform.getRestaurants("Sandwich Palace").addMenu("Tofu Sandwich",new Sandwich(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Tofu())));
+        platform.getRestaurants("Sandwich Palace").addMenu("Cheese Sandwich",new Sandwich(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Cheese())));
 
         platform.registerRestaurant(new RestaurantBuilder().setCounty("LA County").setAddress("101 American Blvd").setName("Salad Barn").setCuisineType("American").setOperatingHours("11AM-12AM").createRestaurant());
-        platform.getRestaurants("Salad Barn").addMenu("Fish Salad",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Cheese(),new Salmon())));
-        platform.getRestaurants("Salad Barn").addMenu("Beef Salad",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Beef())));
-        platform.getRestaurants("Salad Barn").addMenu("Tofu Salad",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Tofu())));
-        platform.getRestaurants("Salad Barn").addMenu("BlackBean Salad",new Noodles(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Cheese())));
+        platform.getRestaurants("Salad Barn").addMenu("Fish Salad",new Salad(),new ArrayList<FoodToppings>(List.of(new Egg(),new Cheese(),new Salmon())));
+        platform.getRestaurants("Salad Barn").addMenu("Beef Salad",new Salad(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Beef())));
+        platform.getRestaurants("Salad Barn").addMenu("Tofu Salad",new Salad(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Tofu())));
+        platform.getRestaurants("Salad Barn").addMenu("BlackBean Salad",new Salad(),new ArrayList<FoodToppings>(List.of(new Egg(),new Peanut(),new Cheese())));
 
         System.out.println("=========================================================================================");
         // Register Drivers
