@@ -1,14 +1,12 @@
 package cppfooddelivery.Decorator.Base;
 
 import cppfooddelivery.Decorator.Interface.Food;
-import cppfooddelivery.Factory.IngredientFactory;
-import cppfooddelivery.Factory.Ingredients;
 
 public class Salad implements Food {
 
     @Override
-    public Ingredients getIngredients() {
-        return IngredientFactory.getInstance().getIngredients("Vegetable");
+    public String getIngredients() {
+        return "Vegetable";
     }
     @Override
     public String getDescription() {

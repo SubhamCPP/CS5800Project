@@ -1,9 +1,9 @@
-package cppfooddelivery.Factory.fats;
+package cppfooddelivery.Factory.protein;
 
 import cppfooddelivery.Factory.Diet;
 import cppfooddelivery.Factory.Ingredients;
 
-public class Soy extends Ingredients {
+public class Soy extends Protein {
     public Soy() {
         super("Soy");
     }

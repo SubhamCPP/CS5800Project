@@ -1,8 +1,10 @@
 package cppfooddelivery.users;
 
+import cppfooddelivery.Decorator.Base.NoBase;
 import cppfooddelivery.Decorator.Interface.Food;
 import cppfooddelivery.Decorator.Toppings.FoodToppings;
 import cppfooddelivery.Factory.Diet;
+import cppfooddelivery.Factory.IngredientFactory;
 
 import java.util.HashMap;
 import java.util.List;
@@ -35,13 +37,14 @@ public class Restaurant extends User {
     }
     public Food getMeal(String meal, Diet diet,FoodToppings ... extra){
         Food mealDiet = menu.get(meal);
-        for(FoodToppings top: mealTopping.get(mealDiet)){
-            if(top.getIngredients().validDiets(diet)) {
+        mealDiet = IngredientFactory.getInstance().setAndCheckIngridient(mealDiet.getIngredients(),diet)?mealDiet: new NoBase();
+        for(FoodToppings top: mealTopping.get(menu.get(meal))){
+            if(IngredientFactory.getInstance().setAndCheckIngridient(top.getIngredients(),diet)) {
                 mealDiet = top.setTempFood(mealDiet);
             }
         }
         for(FoodToppings top: extra){
-            if(top.getIngredients().validDiets(diet)) {
+            if(IngredientFactory.getInstance().setAndCheckIngridient(top.getIngredients(),diet)) {
                 mealDiet = top.setTempFood(mealDiet);
             }
         }

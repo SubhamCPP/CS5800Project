@@ -60,9 +60,9 @@ public class Main {
         platform.registerCustomer(new CustomerBuilder().setName("Mike Brown").setAddress("101 American Blvd").setCounty("LA County").setDiet(Diet.Paleo).createCustomer());
         platform.registerCustomer(new CustomerBuilder().setName("Rachel Wilson").setAddress("123 Dragon Street").setCounty("Orange County").setDiet(Diet.NutAllergy).createCustomer());
         platform.registerCustomer(new CustomerBuilder().setName("Steven Clark").setAddress("789 Sandwich Place").setCounty("San Bernardino County").setDiet(Diet.LactoseIntolerance).createCustomer());
-        platform.registerCustomer(new CustomerBuilder().setName("Ashley Taylor").setAddress("101 American Blvd").setCounty("LA County").setDiet(Diet.NoRestriction).createCustomer());
-        platform.registerCustomer(new CustomerBuilder().setName("Chris Jones").setAddress("456 Taco Way").setCounty("Orange County").setDiet(Diet.NoRestriction).createCustomer());
-        platform.registerCustomer(new CustomerBuilder().setName("Emma Wilson").setAddress("789 Sandwich Place").setCounty("San Bernardino County").setDiet(Diet.NoRestriction).createCustomer());
+        platform.registerCustomer(new CustomerBuilder().setName("Ashley Taylor").setAddress("101 American Blvd").setCounty("LA County").setDiet(Diet.NoCarbs).createCustomer());
+        platform.registerCustomer(new CustomerBuilder().setName("Chris Jones").setAddress("456 Taco Way").setCounty("Orange County").setDiet(Diet.NoFats).createCustomer());
+        platform.registerCustomer(new CustomerBuilder().setName("Emma Wilson").setAddress("789 Sandwich Place").setCounty("San Bernardino County").setDiet(Diet.NoProtein).createCustomer());
         platform.registerCustomer(new CustomerBuilder().setName("Oliver Thomas").setAddress("123 Dragon Street").setCounty("LA County").setDiet(Diet.NoRestriction).createCustomer());
 
         System.out.println("=========================================================================================");
@@ -224,7 +224,7 @@ public class Main {
         meals10.add(platform.getRestaurants("Taco Fiesta").getMeal("Fish Taco",platform.getCustomers("Oliver Thomas").getDiet(),new Spinach()));
         meals10.add(platform.getRestaurants("Taco Fiesta").getMeal("Beef Taco",platform.getCustomers("Oliver Thomas").getDiet(),new Peanut()));
         meals10.add(platform.getRestaurants("Taco Fiesta").getMeal("Tofu Taco",platform.getCustomers("Oliver Thomas").getDiet(),new Egg()));
-        meals10.add(platform.getRestaurants("Taco Fiesta").getMeal("BlackBean Taco",platform.getCustomers("Oliver Thomas").getDiet(),new Apple()));
+        meals10.add(platform.getRestaurants("Taco Fiesta").getMeal("BlackBean Taco",platform.getCustomers("Oliver Thomas").getDiet(),new Avocado()));
 
         Order order10 = new Order(platform.getRestaurants("Taco Fiesta"), platform.getCustomers("Oliver Thomas"), meals10, orderTime10);
         platform.placeOrder(order10);

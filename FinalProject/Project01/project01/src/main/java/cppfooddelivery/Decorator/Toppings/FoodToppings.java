@@ -2,18 +2,16 @@ package cppfooddelivery.Decorator.Toppings;
 
 
 import cppfooddelivery.Decorator.Interface.Food;
-import cppfooddelivery.Factory.IngredientFactory;
-import cppfooddelivery.Factory.Ingredients;
 
 public abstract class FoodToppings implements Food {
     protected Food tempFood;
-    protected Ingredients ingredients;
+    protected String ingredients;
     public FoodToppings(Food food,String ingredient){
         this.tempFood = food;
-        this.ingredients= IngredientFactory.getInstance().getIngredients(ingredient);
+        this.ingredients= ingredient;
     }
     @Override
-    public Ingredients getIngredients(){
+    public String getIngredients(){
         return ingredients;
     }
     @Override

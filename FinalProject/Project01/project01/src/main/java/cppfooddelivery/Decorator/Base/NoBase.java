@@ -2,19 +2,18 @@ package cppfooddelivery.Decorator.Base;
 
 import cppfooddelivery.Decorator.Interface.Food;
 
-public class Taco implements Food {
+public class NoBase implements Food {
     @Override
     public String getIngredients() {
-        return "Grain";
+        return "";
     }
-
     @Override
     public String getDescription() {
-        return "Taco with";
+        return "";
     }
 
     @Override
     public double getCost() {
-        return 5;
+        return 0;
     }
 }

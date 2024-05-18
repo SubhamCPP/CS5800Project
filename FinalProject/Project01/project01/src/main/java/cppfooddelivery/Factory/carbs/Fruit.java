@@ -3,7 +3,7 @@ package cppfooddelivery.Factory.carbs;
 import cppfooddelivery.Factory.Diet;
 import cppfooddelivery.Factory.Ingredients;
 
-public class Fruit extends Ingredients {
+public class Fruit extends Carbs {
     public Fruit(){
         super("Fruit");
     }

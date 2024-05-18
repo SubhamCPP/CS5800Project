@@ -7,5 +7,8 @@ public enum Diet {
     Paleo,
     NutAllergy,
     LactoseIntolerance,
-    NoRestriction
+    NoRestriction,
+    NoProtein,
+    NoFats,
+    NoCarbs
 }
